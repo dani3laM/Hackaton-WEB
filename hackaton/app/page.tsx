@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ProgressBar from "./components/ProgressBarProvider";
+import GeneradorContrasena from "./components/generador-contrasena";
 
 export default function App() {
   const [percentage, setPercentage] = useState(10);
@@ -21,6 +22,7 @@ export default function App() {
           onChange={(e) => setPercentage(e.target.value === '' ? 0 : Number(e.target.value))}
         />
       </div>
+      <GeneradorContrasena />
     </main>
   );
 }
